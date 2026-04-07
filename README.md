@@ -1,18 +1,137 @@
-# SalesTouch Claude Marketplace
+<div align="center">
 
-Public Claude Code marketplace for SalesTouch.
+<br/>
 
-## Install In Claude Code
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/%F0%9F%9A%80_SalesTouch-white?style=for-the-badge&labelColor=white&color=white">
+  <img alt="SalesTouch" src="https://img.shields.io/badge/%F0%9F%9A%80_SalesTouch-black?style=for-the-badge&labelColor=black&color=black">
+</picture>
 
-```text
+<br/>
+
+<h1>You describe. Claude prospects.</h1>
+
+<p>
+<strong>Lead search, scoring, LinkedIn outreach, campaign orchestration.</strong><br/>
+One conversation. Zero tab-switching.
+</p>
+
+<br/>
+
+<a href="#-install-in-10-seconds"><img src="https://img.shields.io/badge/%E2%86%93_Install_in_10s-F97316?style=for-the-badge" alt="Install in 10s"/></a>&nbsp;
+<a href="https://www.salestouch.io"><img src="https://img.shields.io/badge/salestouch.io-111?style=for-the-badge" alt="salestouch.io"/></a>&nbsp;
+<a href="#-what-you-get"><img src="https://img.shields.io/badge/Claude_Code_Plugin-6C5CE7?style=for-the-badge" alt="Claude Code Plugin"/></a>
+
+<br/><br/>
+
+<table><tr><td>
+<br/>
+&nbsp; <em>"Find 20 Heads of Sales in B2B SaaS in Paris and draft a first LinkedIn message."</em> &nbsp;
+<br/><br/>
+&nbsp; <strong>That's it. You type a sentence. Claude does the rest.</strong> &nbsp;
+<br/><br/>
+</td></tr></table>
+
+</div>
+
+<br/>
+
+## ⚡ Install in 10 seconds
+
+Open Claude Code. Paste these two commands. Done.
+
+```
 /plugin marketplace add antoineDsh/salestouch
+```
+```
 /plugin install salestouch@salestouch
 ```
 
-## Repo Layout
+> Verify with `/plugin marketplace list` — then start prospecting.
 
-- `.claude-plugin/marketplace.json`: Claude marketplace manifest
-- `plugins/salestouch/`: SalesTouch Claude plugin bundle
+<br/>
 
-This repository is generated from the private SalesTouch source repository.
-Do not edit generated plugin files here by hand.
+> **Same foundations, same skills.** The plugin ships the exact same skills, tools, and MCP server as the SalesTouch CLI. If you already ran `salestouch setup`, your auth and config carry over — zero extra work.
+
+<br/>
+
+---
+
+## ✨ What you get
+
+| | | |
+|:---:|:---|:---|
+| 🔍 | **Lead Search** | Find and enrich prospects from any criteria |
+| 📊 | **Smart Scoring** | Prioritize leads with AI-powered scoring |
+| 💬 | **LinkedIn Outreach** | Draft personalized connection requests and messages |
+| 🎯 | **Missions** | Run full prospecting campaigns end-to-end |
+| 🏷️ | **Offer Matching** | Auto-match leads to the right product or offer |
+| 📥 | **Imports** | Bring in external lists (Sales Navigator, CSV, etc.) |
+
+<br/>
+
+<div align="center">
+
+```
+You    "Prospect fintech CEOs at seed stage in France,
+        score them, and generate 3 personalized openers."
+
+Claude  🔍  Searches leads
+        📊  Scores & ranks
+        💬  Writes tailored messages
+        ✅  Done — ready to send
+```
+
+</div>
+
+<br/>
+
+### Try it
+
+| Prompt | What Claude does |
+|:---|:---|
+| *"Find 15 AI agency founders hiring SDRs"* | Search → filter → enrich |
+| *"Import this Sales Nav list and prioritize ecommerce CMOs"* | Import → score → rank |
+| *"Analyze this VP Marketing profile and write a connection invite"* | Profile analysis → LinkedIn draft |
+| *"Run a mission: HR Directors in Lyon, 200-1000 employees"* | Full campaign orchestration |
+
+---
+
+<details>
+<summary><strong>🔧 Advanced — repo structure & auth</strong></summary>
+
+<br/>
+
+**Auth resolution** — the plugin finds your credentials automatically:
+
+1. Environment variables (`SALESTOUCH_API_KEY` / `SALESTOUCH_ACCESS_TOKEN`)
+2. Project config `.salestouch/salestouch.json`
+3. Legacy project config `.salestouch/cli.json`
+4. Global SalesTouch config
+
+Already ran `salestouch setup`? Everything works out of the box.
+
+<br/>
+
+**Repo layout**
+
+This repo is both the **marketplace source** and the **plugin bundle** — everything Claude Code needs to discover and run SalesTouch.
+
+| Path | What |
+|:---|:---|
+| `.claude-plugin/marketplace.json` | Claude marketplace manifest |
+| `plugins/salestouch/` | Plugin bundle (skills, MCP server, slash commands) |
+
+</details>
+
+---
+
+<div align="center">
+
+<sub>Auto-generated from a private source — plugin files are overwritten on each release.</sub>
+
+<br/>
+
+**[SalesTouch](https://www.salestouch.io)** — prospecting, reimagined.
+
+</div>
