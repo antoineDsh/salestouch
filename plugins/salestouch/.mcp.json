@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "salestouch": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/servers/salestouch-mcp/dist/index.js"],
+      "env": {
+        "SALESTOUCH_API_BASE_URL": "${SALESTOUCH_API_BASE_URL}",
+        "SALESTOUCH_API_KEY": "${SALESTOUCH_API_KEY}",
+        "SALESTOUCH_ACCESS_TOKEN": "${SALESTOUCH_ACCESS_TOKEN}"
+      }
+    }
+  }
+}

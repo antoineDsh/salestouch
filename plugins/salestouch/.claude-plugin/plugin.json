@@ -1,0 +1,16 @@
+{
+  "name": "salestouch",
+  "version": "0.1.8",
+  "description": "Claude plugin for SalesTouch prospecting tools, skills, and MCP workflows.",
+  "author": {
+    "name": "SalesTouch"
+  },
+  "homepage": "https://www.salestouch.io",
+  "keywords": [
+    "sales",
+    "linkedin",
+    "crm",
+    "prospecting",
+    "mcp"
+  ]
+}
