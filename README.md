@@ -52,6 +52,13 @@ Open Claude Code. Paste these two commands. Done.
 
 Need the full reference? Browse the docs: [https://www.salestouch.io/docs](https://www.salestouch.io/docs)
 
+Prefer more control? Advanced users can also install SalesTouch via the CLI:
+
+```bash
+npm install -g @salestouch/cli
+salestouch setup
+```
+
 <br/>
 
 > **Same foundations, same skills.** The plugin ships the exact same skills, tools, and MCP server as the SalesTouch CLI. If you already ran `salestouch setup`, your auth and config carry over — zero extra work.
@@ -127,19 +134,6 @@ Claude  🔍  Searches leads
 
 <details>
 <summary><strong>🔧 Advanced — repo structure & auth</strong></summary>
-
-<br/>
-
-**Prefer the CLI?**
-
-If you want more control over authentication, per-project config, or cross-agent setup, you can install SalesTouch via the CLI instead of the Claude plugin flow:
-
-```bash
-npm install -g @salestouch/cli
-salestouch setup
-```
-
-Use the plugin when you want the fastest native Claude install. Use the CLI when you want a more configurable runtime.
 
 <br/>
 
