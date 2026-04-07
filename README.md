@@ -20,6 +20,7 @@ One conversation. Zero tab-switching.
 
 <a href="#-install-in-10-seconds"><img src="https://img.shields.io/badge/%E2%86%93_Install_in_10s-F97316?style=for-the-badge" alt="Install in 10s"/></a>&nbsp;
 <a href="https://www.salestouch.io"><img src="https://img.shields.io/badge/salestouch.io-111?style=for-the-badge" alt="salestouch.io"/></a>&nbsp;
+<a href="https://www.salestouch.io/docs"><img src="https://img.shields.io/badge/Docs-0F172A?style=for-the-badge" alt="Docs"/></a>&nbsp;
 <a href="#-what-you-get"><img src="https://img.shields.io/badge/Claude_Code_Plugin-6C5CE7?style=for-the-badge" alt="Claude Code Plugin"/></a>
 
 <br/><br/>
@@ -48,6 +49,8 @@ Open Claude Code. Paste these two commands. Done.
 ```
 
 > Verify with `/plugin marketplace list` — then start prospecting.
+
+Need the full reference? Browse the docs: [https://www.salestouch.io/docs](https://www.salestouch.io/docs)
 
 <br/>
 
