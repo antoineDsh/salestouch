@@ -102,6 +102,19 @@ Claude  🔍  Searches leads
 
 <br/>
 
+**Prefer the CLI?**
+
+If you want more control over authentication, per-project config, or cross-agent setup, you can install SalesTouch via the CLI instead of the Claude plugin flow:
+
+```bash
+npm install -g @salestouch/cli
+salestouch setup
+```
+
+Use the plugin when you want the fastest native Claude install. Use the CLI when you want a more configurable runtime.
+
+<br/>
+
 **Auth resolution** — the plugin finds your credentials automatically:
 
 1. Environment variables (`SALESTOUCH_API_KEY` / `SALESTOUCH_ACCESS_TOKEN`)
