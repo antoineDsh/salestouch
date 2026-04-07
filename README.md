@@ -27,7 +27,7 @@ One conversation. Zero tab-switching.
 
 <table><tr><td>
 <br/>
-&nbsp; <em>"Find 20 Heads of Sales in B2B SaaS in Paris and draft a first LinkedIn message."</em> &nbsp;
+&nbsp; <em>"Find 20 Heads of Sales in B2B SaaS in Paris, launch the sequence, and book meetings."</em> &nbsp;
 <br/><br/>
 &nbsp; <strong>That's it. You type a sentence. Claude does the rest.</strong> &nbsp;
 <br/><br/>
@@ -66,7 +66,7 @@ Need the full reference? Browse the docs: [https://www.salestouch.io/docs](https
 |:---:|:---|:---|
 | 🔍 | **Lead Search** | Find and enrich prospects from any criteria |
 | 📊 | **Smart Scoring** | Prioritize leads with AI-powered scoring |
-| 💬 | **LinkedIn Outreach** | Draft personalized connection requests and messages |
+| 💬 | **LinkedIn Execution** | Plan, send, follow up, and drive conversations to booked meetings |
 | 🎯 | **Missions** | Run full prospecting campaigns end-to-end |
 | 🏷️ | **Offer Matching** | Auto-match leads to the right product or offer |
 | 📥 | **Imports** | Bring in external lists (Sales Navigator, CSV, etc.) |
@@ -101,12 +101,13 @@ If you want to prospect on LinkedIn **serenely**, SalesTouch is not a nice-to-ha
 
 ```
 You    "Prospect fintech CEOs at seed stage in France,
-        score them, and generate 3 personalized openers."
+        launch the outreach, manage follow-ups, and book meetings."
 
 Claude  🔍  Searches leads
         📊  Scores & ranks
-        💬  Writes tailored messages
-        ✅  Done — ready to send
+        💬  Plans and sends outreach
+        🔁  Handles follow-ups
+        📅  Pushes toward booked meetings
 ```
 
 </div>
@@ -119,8 +120,8 @@ Claude  🔍  Searches leads
 |:---|:---|
 | *"Find 15 AI agency founders hiring SDRs"* | Search → filter → enrich |
 | *"Import this Sales Nav list and prioritize ecommerce CMOs"* | Import → score → rank |
-| *"Analyze this VP Marketing profile and write a connection invite"* | Profile analysis → LinkedIn draft |
-| *"Run a mission: HR Directors in Lyon, 200-1000 employees"* | Full campaign orchestration |
+| *"Analyze this VP Marketing profile and launch the right LinkedIn sequence"* | Profile analysis → messaging → execution |
+| *"Run a mission: HR Directors in Lyon, 200-1000 employees"* | Full campaign orchestration → follow-ups → meeting push |
 
 ---
 
