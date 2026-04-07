@@ -73,6 +73,30 @@ Need the full reference? Browse the docs: [https://www.salestouch.io/docs](https
 
 <br/>
 
+## 🛡️ Why this matters for real LinkedIn prospecting
+
+LinkedIn prospecting is not just about writing prompts. It is an **operations problem**.
+
+Without the right layer underneath, you end up juggling brittle scripts, manual retries, blocked sessions, and fragile automations.
+
+**SalesTouch is the sane way to prospect on LinkedIn seriously.**
+
+It gives Claude the operational infrastructure prospecting actually needs:
+
+| Capability | Why it matters |
+|:---|:---|
+| **Queue management** | Smooth execution instead of chaotic bursts |
+| **Rate-limit control** | Safer pacing across actions and workflows |
+| **Residential proxy routing** | Cleaner execution conditions for LinkedIn-facing tasks |
+| **Secured scraping** | More reliable collection and less fragile glue code |
+| **Batching** | Process large prospect sets without turning prompts into manual busywork |
+| **Cron jobs** | Run prospecting routines on schedule, not by hand |
+| **Enrichment workflows** | Turn raw leads into usable outreach context automatically |
+
+If you want to prospect on LinkedIn **serenely**, SalesTouch is not a nice-to-have plugin. It is the operational layer that makes the whole system viable.
+
+<br/>
+
 <div align="center">
 
 ```
