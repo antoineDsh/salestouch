@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.9 - 2026-04-08
+
+- Release the SalesTouch Claude marketplace plugin.
+
 ## 0.1.0
 
 - Added the initial SalesTouch Claude plugin scaffold.
