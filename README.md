@@ -39,7 +39,7 @@ One conversation. Zero tab-switching.
 
 ## ⚡ Install in 10 seconds
 
-Open Claude Code. Paste these two commands. Done.
+Open Claude Code. Paste these two commands.
 
 ```
 /plugin marketplace add antoineDsh/salestouch
@@ -48,20 +48,15 @@ Open Claude Code. Paste these two commands. Done.
 /plugin install salestouch@salestouch
 ```
 
-> Verify with `/plugin marketplace list` — then start prospecting.
+Then open Claude and run:
 
-Need the full reference? Browse the docs: [https://www.salestouch.io/docs](https://www.salestouch.io/docs)
-
-Prefer more control? Advanced users can also install SalesTouch via the CLI:
-
-```bash
-npm install -g @salestouch/cli
-salestouch setup
+```
+/mcp
 ```
 
-<br/>
+Claude opens the browser login, connects to SalesTouch over the remote MCP server, and the tools are ready.
 
-> **Same foundations, same skills.** The plugin ships the exact same skills, tools, and MCP server as the SalesTouch CLI. If you already ran `salestouch setup`, your auth and config carry over — zero extra work.
+Need the full reference? Browse the docs: [https://www.salestouch.io/docs](https://www.salestouch.io/docs)
 
 <br/>
 
@@ -133,29 +128,31 @@ Claude  🔍  Searches leads
 ---
 
 <details>
-<summary><strong>🔧 Advanced — repo structure & auth</strong></summary>
+<summary><strong>🔧 Advanced — remote MCP details</strong></summary>
 
 <br/>
 
-**Auth resolution** — the plugin finds your credentials automatically:
+**Canonical MCP config**
 
-1. Environment variables (`SALESTOUCH_API_KEY` / `SALESTOUCH_ACCESS_TOKEN`)
-2. Project config `.salestouch/salestouch.json`
-3. Legacy project config `.salestouch/cli.json`
-4. Global SalesTouch config
-
-Already ran `salestouch setup`? Everything works out of the box.
+```json
+{
+  "mcpServers": {
+    "salestouch": {
+      "type": "http",
+      "url": "https://www.salestouch.io/api/mcp"
+    }
+  }
+}
+```
 
 <br/>
 
-**Repo layout**
+**Support fallback**
 
-This repo is both the **marketplace source** and the **plugin bundle** — everything Claude Code needs to discover and run SalesTouch.
+If OAuth discovery is blocked in your environment, SalesTouch also supports:
 
-| Path | What |
-|:---|:---|
-| `.claude-plugin/marketplace.json` | Claude marketplace manifest |
-| `plugins/salestouch/` | Plugin bundle (skills, MCP server, slash commands) |
+- an explicit `oauth.authServerMetadataUrl`
+- a direct `X-API-Key` header for support use cases
 
 </details>
 
