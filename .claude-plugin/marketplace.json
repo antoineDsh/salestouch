@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Official Claude marketplace for the SalesTouch plugin.",
-    "version": "0.1.10"
+    "version": "0.1.11"
   },
   "plugins": [
     {
