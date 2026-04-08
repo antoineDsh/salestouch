@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.11 - 2026-04-08
+
+- Release the SalesTouch Claude marketplace plugin.
+
 ## 0.1.10 - 2026-04-08
 
 - Pin the bundled MCP config to the canonical OAuth metadata endpoint for more reliable Claude connection setup.
