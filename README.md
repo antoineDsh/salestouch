@@ -69,6 +69,22 @@ SalesTouch handles the research, enrichment, scoring, and message drafting. **Yo
 
 **That's it.** Start a conversation and ask Claude to find leads.
 
+Manual config, if Claude needs an explicit OAuth metadata URL:
+
+```json
+{
+  "mcpServers": {
+    "salestouch": {
+      "type": "http",
+      "url": "https://www.salestouch.io/api/mcp",
+      "oauth": {
+        "authServerMetadataUrl": "https://www.salestouch.io/.well-known/oauth-authorization-server/api/auth"
+      }
+    }
+  }
+}
+```
+
 <br/>
 
 ## How it works

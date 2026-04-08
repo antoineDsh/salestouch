@@ -185,6 +185,22 @@ A browser window opens. Log in to your SalesTouch account. Done.
 
 The bundled MCP config already points Claude to the canonical SalesTouch OAuth metadata endpoint, so the plugin does not depend on fallback discovery behavior.
 
+If you need to wire the remote MCP server manually, use:
+
+```json
+{
+  "mcpServers": {
+    "salestouch": {
+      "type": "http",
+      "url": "https://www.salestouch.io/api/mcp",
+      "oauth": {
+        "authServerMetadataUrl": "https://www.salestouch.io/.well-known/oauth-authorization-server/api/auth"
+      }
+    }
+  }
+}
+```
+
 ### 3. Start prospecting
 
 ```
