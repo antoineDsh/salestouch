@@ -1,72 +1,100 @@
 <p align="center">
-  <strong>🚀 SalesTouch</strong><br/>
-  <em>Your AI prospecting copilot — right inside Claude.</em>
+  <img src="https://www.salestouch.io/images/icon.png" alt="SalesTouch" width="80" />
 </p>
+
+<h1 align="center">SalesTouch</h1>
+
+<p align="center">
+  <strong>Your AI prospecting copilot — right inside Claude.</strong><br/>
+  Find leads. Score them. Write killer messages. Close deals.<br/>
+  All from a single conversation.
+</p>
+
+<p align="center">
+  <a href="https://www.salestouch.io"><img src="https://img.shields.io/badge/website-salestouch.io-blue?style=flat-square" alt="Website" /></a>
+  <img src="https://img.shields.io/badge/version-0.1.9-green?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/platform-Claude_Desktop_|_Claude_Code-purple?style=flat-square" alt="Platform" />
+  <img src="https://img.shields.io/badge/protocol-MCP-orange?style=flat-square" alt="MCP" />
+</p>
+
+<br/>
 
 ---
 
-SalesTouch turns Claude into a full prospecting workspace.
-Find leads, score them, craft personalized LinkedIn messages, and run outreach workflows — all from a single conversation.
+<br/>
 
-## Who is it for?
+## What is SalesTouch?
 
-- **Founders** tired of spending hours on cold outreach
-- **Sales teams** who want to prospect smarter, not harder
-- **Growth & RevOps** looking for AI-native prospecting workflows
+**SalesTouch turns Claude into a full B2B prospecting workspace.**
+
+No more tab-switching between LinkedIn, your CRM, and ChatGPT. Just tell Claude what you need:
+
+> *"Find 20 Heads of Sales in B2B SaaS startups in Paris and draft a LinkedIn message for each."*
+
+SalesTouch handles the research, enrichment, scoring, and message drafting. **You review and send.**
+
+<br/>
 
 ## What you can do
 
-| Capability | Description |
-|---|---|
-| **Lead search** | Find and enrich prospects by role, industry, company size, location |
-| **Smart scoring** | Prioritize leads based on fit and engagement signals |
-| **LinkedIn drafts** | Generate personalized connection requests and messages |
-| **Mission workflows** | Run structured prospecting sessions with goals and tracking |
-| **Sales Navigator import** | Import prospect lists and work them inside Claude |
+| | Capability | Description |
+|---|---|---|
+| **Search** | Lead search & enrichment | Find prospects by role, industry, company size, location. Enrich with LinkedIn data. |
+| **Score** | Smart lead scoring | Prioritize leads with AI scoring. Train it with natural language feedback. |
+| **Draft** | LinkedIn message drafting | 3 personalized message variants per prospect. Not generic. Not spammy. |
+| **Import** | LinkedIn & Sales Nav imports | Pull leads from searches, post engagers, groups, profile viewers. |
+| **Act** | LinkedIn actions | Send messages, connection requests, post, comment, react — all from Claude. |
+| **Plan** | Mission workflows | Structured prospecting sessions with goals and progress tracking. |
+| **Sell** | Offer management | Create and manage sales offers linked to missions. |
 
-## Get started
+<br/>
+
+## Get started in 60 seconds
 
 ### Claude Desktop (Cowork)
 
-1. Open Claude Desktop → switch to **Cowork**
-2. Go to **Customize** → **Add a plugin** → **Create a plugin**
-3. Click **Add a marketplace** and enter:
-   ```
-   antoinedsh/salestouch
-   ```
+1. Open Claude Desktop > switch to **Cowork**
+2. Go to **Customize** > **Add a plugin** > **Create a plugin**
+3. Click **Add a marketplace** and enter `antoinedsh/salestouch`
 4. Open the **Personal** tab and enable **salestouch**
-5. Run `/mcp` — Claude opens a browser login to connect your SalesTouch account
-
-That's it. Start a conversation and ask Claude to find leads.
+5. Run `/mcp` — log in with your SalesTouch account
 
 ### Claude Code
 
-```
+```bash
 /plugin marketplace add antoinedsh/salestouch
 /plugin install salestouch@salestouch
 /mcp
 ```
 
-## Try it
+**That's it.** Start a conversation and ask Claude to find leads.
 
-Once connected, just type something like:
-
-> *Find 20 Heads of Sales in B2B SaaS startups in Paris and draft a first LinkedIn message for each.*
-
-SalesTouch handles the research, scoring, and message drafting. You review and send.
+<br/>
 
 ## How it works
 
-SalesTouch connects to Claude through a **remote MCP server** — no local setup, no API keys to manage.
-After a one-time OAuth login, all SalesTouch tools are available in your Claude workspace.
+```
+You  -->  Claude  -->  SalesTouch MCP Server  -->  LinkedIn / CRM / Enrichment
+         (plugin)      (remote, OAuth-secured)
+```
+
+No API keys. No config files. No local setup. Just OAuth and you're live.
+
+> Sensitive actions (sends, imports) always require your explicit approval.
+
+<br/>
 
 ## Learn more
 
-- Website: [salestouch.io](https://www.salestouch.io)
-- Support: support@salestouch.ai
+- **Website:** [salestouch.io](https://www.salestouch.io)
+- **Full docs:** see the [plugin README](plugins/salestouch/README.md) for the complete command reference
+- **Support:** [support@salestouch.ai](mailto:support@salestouch.ai)
+
+<br/>
 
 ---
 
 <p align="center">
+  <strong>Stop prospecting. Start closing.</strong><br/><br/>
   <sub>Built with care for salespeople who'd rather sell than prospect.</sub>
 </p>
