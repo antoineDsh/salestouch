@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://www.salestouch.io"><img src="https://img.shields.io/badge/website-salestouch.io-blue?style=flat-square" alt="Website" /></a>
-  <img src="https://img.shields.io/badge/version-0.1.9-green?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/version-0.1.10-green?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/platform-Claude_Desktop_|_Claude_Code-purple?style=flat-square" alt="Platform" />
   <img src="https://img.shields.io/badge/protocol-MCP-orange?style=flat-square" alt="MCP" />
 </p>
@@ -182,6 +182,8 @@ Create and manage your sales offers. Link them to missions so every outreach is 
 A browser window opens. Log in to your SalesTouch account. Done.
 
 > No API keys. No environment variables. No config files. Just OAuth.
+
+The bundled MCP config already points Claude to the canonical SalesTouch OAuth metadata endpoint, so the plugin does not depend on fallback discovery behavior.
 
 ### 3. Start prospecting
 
