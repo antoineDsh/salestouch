@@ -1,51 +1,72 @@
-# SalesTouch for Claude
+<p align="center">
+  <strong>🚀 SalesTouch</strong><br/>
+  <em>Your AI prospecting copilot — right inside Claude.</em>
+</p>
 
-SalesTouch brings lead search, scoring, LinkedIn outreach, and mission orchestration into Claude through the official marketplace plugin.
+---
 
-## Install in Claude Cowork
+SalesTouch turns Claude into a full prospecting workspace.
+Find leads, score them, craft personalized LinkedIn messages, and run outreach workflows — all from a single conversation.
 
-1. Open Claude Desktop and switch to `Cowork`.
-2. Open `Customize`.
-3. Click `Add a plugin`.
-4. Click `Create a plugin`.
-5. Click `Add a marketplace`.
-6. Enter `antoinedsh/salestouch`.
-7. Open the `Personal` tab and enable `salestouch`.
-8. Run `/mcp`.
+## Who is it for?
 
-Claude opens the browser login and connects to the SalesTouch remote MCP server at `https://www.salestouch.io/api/mcp`.
+- **Founders** tired of spending hours on cold outreach
+- **Sales teams** who want to prospect smarter, not harder
+- **Growth & RevOps** looking for AI-native prospecting workflows
 
-## Advanced install in Claude Code
+## What you can do
 
-```text
+| Capability | Description |
+|---|---|
+| **Lead search** | Find and enrich prospects by role, industry, company size, location |
+| **Smart scoring** | Prioritize leads based on fit and engagement signals |
+| **LinkedIn drafts** | Generate personalized connection requests and messages |
+| **Mission workflows** | Run structured prospecting sessions with goals and tracking |
+| **Sales Navigator import** | Import prospect lists and work them inside Claude |
+
+## Get started
+
+### Claude Desktop (Cowork)
+
+1. Open Claude Desktop → switch to **Cowork**
+2. Go to **Customize** → **Add a plugin** → **Create a plugin**
+3. Click **Add a marketplace** and enter:
+   ```
+   antoinedsh/salestouch
+   ```
+4. Open the **Personal** tab and enable **salestouch**
+5. Run `/mcp` — Claude opens a browser login to connect your SalesTouch account
+
+That's it. Start a conversation and ask Claude to find leads.
+
+### Claude Code
+
+```
 /plugin marketplace add antoinedsh/salestouch
 /plugin install salestouch@salestouch
 /mcp
 ```
 
-## What you get
+## Try it
 
-- Lead search and enrichment
-- Mission and offer workflows
-- Scoring and prioritization
-- LinkedIn draft creation and approval
-- Remote MCP transport with OAuth-first auth
+Once connected, just type something like:
 
-## Repository layout
+> *Find 20 Heads of Sales in B2B SaaS startups in Paris and draft a first LinkedIn message for each.*
 
-- `.claude-plugin/marketplace.json`: marketplace manifest
-- `plugins/salestouch/`: plugin bundle shipped to Claude
+SalesTouch handles the research, scoring, and message drafting. You review and send.
 
-## Publish from the source repo
+## How it works
 
-This public repo is published from the source monorepo using `git subtree` with the prefix:
+SalesTouch connects to Claude through a **remote MCP server** — no local setup, no API keys to manage.
+After a one-time OAuth login, all SalesTouch tools are available in your Claude workspace.
 
-```text
-marketplace/salestouch
-```
+## Learn more
 
-From the source repo:
+- Website: [salestouch.io](https://www.salestouch.io)
+- Support: support@salestouch.ai
 
-```bash
-pnpm publish:salestouch-marketplace
-```
+---
+
+<p align="center">
+  <sub>Built with care for salespeople who'd rather sell than prospect.</sub>
+</p>

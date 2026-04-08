@@ -1,130 +1,44 @@
-# SalesTouch Claude Plugin
+# SalesTouch Plugin for Claude
 
-This folder contains the Claude plugin bundle for SalesTouch.
+This plugin gives Claude access to the full SalesTouch prospecting toolkit through a remote MCP connection.
 
-The plugin is now plugin-first and remote-first:
+## Capabilities
 
-- no local MCP server is bundled
-- the canonical transport is the SalesTouch remote MCP server at `https://www.salestouch.io/api/mcp`
+- **Lead search & enrichment** — find prospects by role, industry, company size, and location
+- **Lead scoring** — prioritize contacts based on fit and engagement signals
+- **LinkedIn message drafting** — generate personalized outreach messages and connection requests
+- **Mission workflows** — run structured prospecting sessions with goals and progress tracking
+- **Sales Navigator import** — pull in prospect lists and work them directly in Claude
 
-## Structure
+## Available commands
 
-- `.claude-plugin/plugin.json`: plugin bundle metadata
-- `.mcp.json`: remote MCP registration for Claude
-- `commands/`: slash commands exposed inside Claude Code
-- `settings.json`: default Claude plugin settings
-- `skills/`: bundled SalesTouch skills
-- `hooks/hooks.json`: plugin hook entrypoint
+| Command | Description |
+|---|---|
+| `/salestouch:linkedin-message-writer` | Draft a personalized LinkedIn message for a prospect |
 
-## Canonical Flow
+## Installation
 
-1. Add the SalesTouch marketplace in Claude Cowork and enable the plugin.
-2. Open Claude and run `/mcp`.
-3. Complete the SalesTouch OAuth flow in the browser.
-4. Use the SalesTouch tools and skills from Claude.
+### Claude Desktop (Cowork)
 
-## Remote MCP
+1. Open Claude Desktop → switch to **Cowork**
+2. Go to **Customize** → **Add a plugin** → **Create a plugin**
+3. Click **Add a marketplace** and enter `antoinedsh/salestouch`
+4. Open the **Personal** tab and enable **salestouch**
+5. Run `/mcp` to connect your SalesTouch account
 
-The plugin ships this canonical MCP config:
+### Claude Code
 
-```json
-{
-  "mcpServers": {
-    "salestouch": {
-      "type": "http",
-      "url": "https://www.salestouch.io/api/mcp"
-    }
-  }
-}
 ```
-
-If Claude needs an explicit metadata override, use:
-
-```json
-{
-  "mcpServers": {
-    "salestouch": {
-      "type": "http",
-      "url": "https://www.salestouch.io/api/mcp",
-      "oauth": {
-        "authServerMetadataUrl": "https://www.salestouch.io/.well-known/openid-configuration"
-      }
-    }
-  }
-}
-```
-
-Support fallback only:
-
-```json
-{
-  "mcpServers": {
-    "salestouch": {
-      "type": "http",
-      "url": "https://www.salestouch.io/api/mcp",
-      "headers": {
-        "X-API-Key": "st_..."
-      }
-    }
-  }
-}
-```
-
-## Plugin Commands
-
-The plugin ships this command entrypoint in Claude Code:
-
-- `/salestouch:linkedin-message-writer`
-
-## Claude Cowork Install
-
-1. Open Claude Desktop and switch to `Cowork`.
-2. Open `Customize`.
-3. Click `Add a plugin`.
-4. Click `Create a plugin`.
-5. Click `Add a marketplace`.
-6. Enter `antoinedsh/salestouch`.
-7. Open the `Personal` tab and enable `salestouch`.
-8. Run `/mcp`.
-
-## Claude Code Advanced Install
-
-If you prefer a marketplace-based install in Claude Code, use:
-
-```text
 /plugin marketplace add antoinedsh/salestouch
 /plugin install salestouch@salestouch
-```
-
-Then run:
-
-```text
 /mcp
 ```
 
-## Public Repo
+## Authentication
 
-The public Claude marketplace repository is:
+The plugin connects to SalesTouch via OAuth. When you run `/mcp`, Claude opens a browser window where you log in to your SalesTouch account. Once authenticated, all tools are available for the session.
 
-```text
-antoinedsh/salestouch
-```
+## Support
 
-In the private source repository, this plugin now lives inside the subtree prefix:
-
-```text
-marketplace/salestouch
-```
-
-Publish it with:
-
-```bash
-git subtree push --prefix marketplace/salestouch https://github.com/antoineDsh/salestouch.git main
-```
-
-Or use the release helper from the source repo:
-
-```bash
-pnpm release:plugin patch
-pnpm release:plugin patch -m "chore: ship plugin v{version}"
-```
+- Website: [salestouch.io](https://www.salestouch.io)
+- Email: support@salestouch.ai
