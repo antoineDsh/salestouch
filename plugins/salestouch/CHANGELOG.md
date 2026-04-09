@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.16 - 2026-04-09
+
+- Align the protected resource metadata with the full SalesTouch OAuth scope set so Claude requests the right scopes during plugin authorization.
+- Add explicit consent labels for agent, import, LinkedIn, scoring, and email scopes in the plugin auth flow.
+
 ## 0.1.15 - 2026-04-09
 
 - Request the full SalesTouch scope set during the initial Claude OAuth authorization flow.
