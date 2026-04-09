@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.15 - 2026-04-09
+
+- Request the full SalesTouch scope set during the initial Claude OAuth authorization flow.
+- Return proper MCP auth challenges when a tool call is missing required scopes so Claude can re-authorize cleanly.
+- Publish the plugin manifest with explicit command, agent, skill, hook, MCP, and output-style paths.
+- Add placeholder `agents/`, `scripts/`, and `styles/` plugin directories for a more stable bundle layout.
+
 ## 0.1.13 - 2026-04-09
 
 - Release the SalesTouch Claude marketplace plugin.
