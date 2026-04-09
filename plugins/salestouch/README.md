@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://www.salestouch.io"><img src="https://img.shields.io/badge/website-salestouch.io-blue?style=flat-square" alt="Website" /></a>
-  <img src="https://img.shields.io/badge/version-0.1.10-green?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/version-0.1.13-green?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/platform-Claude_Desktop_|_Claude_Code-purple?style=flat-square" alt="Platform" />
   <img src="https://img.shields.io/badge/protocol-MCP-orange?style=flat-square" alt="MCP" />
 </p>
@@ -182,6 +182,27 @@ Create and manage your sales offers. Link them to missions so every outreach is 
 A browser window opens. Log in to your SalesTouch account. Done.
 
 > No API keys. No environment variables. No config files. Just OAuth.
+
+The bundled MCP config now pins the canonical SalesTouch OAuth metadata endpoint and the HTTP `Accept` header needed by Claude clients that are strict on MCP transport negotiation.
+
+If you need to wire the remote MCP server manually, use:
+
+```json
+{
+  "mcpServers": {
+    "salestouch": {
+      "type": "http",
+      "url": "https://www.salestouch.io/api/mcp",
+      "headers": {
+        "Accept": "application/json, text/event-stream"
+      },
+      "oauth": {
+        "authServerMetadataUrl": "https://www.salestouch.io/.well-known/oauth-authorization-server/api/auth"
+      }
+    }
+  }
+}
+```
 
 ### 3. Start prospecting
 
