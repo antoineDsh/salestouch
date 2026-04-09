@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.13 - 2026-04-09
+
+- Release the SalesTouch Claude marketplace plugin.
+
 ## 0.1.12 - 2026-04-08
 
 - Release the SalesTouch Claude marketplace plugin.

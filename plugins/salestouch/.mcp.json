@@ -5,6 +5,9 @@
       "url": "https://www.salestouch.io/api/mcp",
       "oauth": {
         "authServerMetadataUrl": "https://www.salestouch.io/.well-known/oauth-authorization-server/api/auth"
+      },
+      "headers": {
+        "Accept": "application/json, text/event-stream"
       }
     }
   }

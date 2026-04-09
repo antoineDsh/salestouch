@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://www.salestouch.io"><img src="https://img.shields.io/badge/website-salestouch.io-blue?style=flat-square" alt="Website" /></a>
-  <img src="https://img.shields.io/badge/version-0.1.12-green?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/version-0.1.13-green?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/platform-Claude_Desktop_|_Claude_Code-purple?style=flat-square" alt="Platform" />
   <img src="https://img.shields.io/badge/protocol-MCP-orange?style=flat-square" alt="MCP" />
 </p>
@@ -77,6 +77,9 @@ Manual config, if Claude needs an explicit OAuth metadata URL:
     "salestouch": {
       "type": "http",
       "url": "https://www.salestouch.io/api/mcp",
+      "headers": {
+        "Accept": "application/json, text/event-stream"
+      },
       "oauth": {
         "authServerMetadataUrl": "https://www.salestouch.io/.well-known/oauth-authorization-server/api/auth"
       }
