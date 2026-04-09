@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0 - 2026-04-10
+
+- Consolidate the Claude-facing MCP surface around compound lead, scrape, LinkedIn, mission, and offer tools so common workflows require fewer calls.
+- Remove legacy public REST endpoints, MCP resources, and deprecated runtime pages from the published plugin surface.
+- Tighten OAuth scope metadata, public permission mapping, and premium gating for the new MCP aliases.
+- Align the bundled plugin layout and docs with the `output-styles` path and the streamlined marketplace manifest.
+
 ## 0.1.16 - 2026-04-09
 
 - Align the protected resource metadata with the full SalesTouch OAuth scope set so Claude requests the right scopes during plugin authorization.
