@@ -10,12 +10,12 @@ Use the SalesTouch hosted MCP server for SalesTouch-native workflows.
 ## When To Use It
 
 - Leads, missions, offers, imports, LinkedIn prospecting, scoring
-- Workspace status and SalesTouch reference resources
+- SalesTouch tool-driven workflows exposed through the hosted MCP server
 - Multi-step prospecting tasks that still map to existing SalesTouch tools
 
 ## Workflow
 
-1. Inspect the available SalesTouch tools and resources relevant to the task.
+1. Inspect the available SalesTouch tools relevant to the task.
 2. Read the tool schema before constructing inputs.
 3. Use SalesTouch MCP tools as the default interface to SalesTouch.
 4. Prefer read operations when context is missing.
