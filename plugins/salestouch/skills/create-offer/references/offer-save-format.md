@@ -104,14 +104,14 @@ All size fields must be positive integers or omitted. Do not infer from vague te
   "title": "string or null",
   "content": "string",
   "author": "string or null",
-  "jobTitle": "string or null",
+  "job_title": "string or null",
   "company": "string or null",
-  "companyLocation": "string or null",
-  "companySize": "string or null",
+  "company_location": "string or null",
+  "company_size": "string or null",
   "industry": "string or null",
-  "keyResult": "string or null",
+  "key_result": "string or null",
   "source": "string or null",
-  "publishedAt": "2026-01-15T00:00:00.000Z",
+  "published_at": "2026-01-15T00:00:00.000Z",
   "url": "https://example.com",
   "tags": ["string"],
   "metadata": { "key": "value" }
@@ -121,7 +121,7 @@ All size fields must be positive integers or omitted. Do not infer from vague te
 `type` enum: `TESTIMONIAL`, `CASE_STUDY`, `PRESS`, `SECTOR_REFERENCE`, `STATS`, `OTHER`
 
 - `content` required
-- Nested keys use `camelCase`
+- Nested keys use `snake_case` (the backend normalizes both snake_case and camelCase)
 - `tags` short and specific
 - `metadata` optional, simple JSON
 - Never invent testimonial authors or metrics
@@ -134,7 +134,7 @@ All size fields must be positive integers or omitted. Do not infer from vague te
   "title": "string",
   "description": "string or null",
   "url": "https://example.com",
-  "publishedAt": "2026-01-15T00:00:00.000Z"
+  "published_at": "2026-01-15T00:00:00.000Z"
 }
 ```
 
@@ -147,7 +147,7 @@ All size fields must be positive integers or omitted. Do not infer from vague te
 ## Formatting Rules
 
 - Top-level keys: `snake_case`
-- Nested reference/resource keys: exact documented casing (`camelCase`)
+- Nested reference/resource keys: `snake_case` (backend normalizes both snake_case and camelCase)
 - Use `differentiators`, never `differenciators`
 - Omit empty strings — prefer omitting weak fields to fabricating them
 - ISO 8601 strings for dates
@@ -203,14 +203,14 @@ All size fields must be positive integers or omitted. Do not infer from vague te
       "title": "string",
       "content": "string",
       "author": "string",
-      "jobTitle": "string",
+      "job_title": "string",
       "company": "string",
-      "companyLocation": "string",
-      "companySize": "string",
+      "company_location": "string",
+      "company_size": "string",
       "industry": "string",
-      "keyResult": "string",
+      "key_result": "string",
       "source": "string",
-      "publishedAt": "2026-01-15T00:00:00.000Z",
+      "published_at": "2026-01-15T00:00:00.000Z",
       "url": "https://example.com",
       "tags": ["string"],
       "metadata": { "key": "value" }
@@ -222,7 +222,7 @@ All size fields must be positive integers or omitted. Do not infer from vague te
       "title": "string",
       "description": "string",
       "url": "https://example.com",
-      "publishedAt": "2026-01-15T00:00:00.000Z"
+      "published_at": "2026-01-15T00:00:00.000Z"
     }
   ]
 }
