@@ -39,7 +39,7 @@ When called from the prospecting routine, the following context is already avail
 - **Mission context**: name, description, target_audience, instruction
 - **Offer context** (when linked): positioning, ICP, value_proposition
 
-When called standalone, fetch the missing context with `lead_search({ lead_id, include_context: true })` + `mission_search` + `offer_search`.
+When called standalone, fetch the missing context with `lead_search({ lead_id, include_context: true })` + `mission_search` + `offer_search`. If no mission or offer exists for this lead, suggest the `create-mission` or `create-offer` skill before drafting — richer context produces better messages.
 
 ---
 

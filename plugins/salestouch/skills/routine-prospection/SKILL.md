@@ -97,6 +97,8 @@ Three modes:
 
 **"ALL" mode**: user says "TOUT", "toutes les missions", "all missions", "cross-mission". Store all running mission IDs. The lead fetch will omit the mission filter.
 
+If no running missions exist: suggest the `create-mission` skill to set one up. Don't try to create a mission inline.
+
 If multiple missions are running and user didn't specify: show the list and offer "ALL" or a specific pick. Don't ask unnecessary questions - if there's only one mission, just use it.
 
 #### Resolve offer scope
@@ -107,7 +109,7 @@ For each selected mission, load its linked offer:
 offer_search({ offer_id: mission.offer_id })
 ```
 
-If a mission has no linked offer (`offer_id` is null), that's OK. Use the mission's own context (description, target_audience, instruction) for message generation. Don't block the workflow.
+If a mission has no linked offer (`offer_id` is null), that's OK. Use the mission's own context (description, target_audience, instruction) for message generation. Don't block the workflow. Mention the `create-offer` skill at session end if richer commercial context would improve messages.
 
 Extract commercial context:
 
@@ -214,7 +216,11 @@ Display session summary with: duration, leads contacted, leads skipped, average 
 
 **No LinkedIn account**: tell user to connect one in SalesTouch.
 
-**No leads found**: offer to switch mission, import new leads, or end session.
+**No running missions**: suggest the `create-mission` skill to set one up. Don't create a mission inline.
+
+**Mission has no offer and messages feel generic**: suggest the `create-offer` skill at session end to enrich commercial context for future sessions.
+
+**No leads found**: offer to switch mission, import new leads (via `linkedin-scrape-import` skill), or end session.
 
 **Enrichment failure**: offer skip or retry for that lead.
 

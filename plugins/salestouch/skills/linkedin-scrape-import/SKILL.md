@@ -29,7 +29,7 @@ Before any import, gather commercial context. This directly affects how you esti
 
 ### Steps
 
-1. **Identify the mission.** If the user provides a `mission_id`, fetch it with `mission_search`. If they give a name or description, search for it. If no mission is provided, search existing missions with `mission_search` to find one that fits the context (source URL, topic, target audience). If a good match exists, use it. If no existing mission fits, create a new one with `mission_save` before importing — every import must be linked to a mission.
+1. **Identify the mission.** If the user provides a `mission_id`, fetch it with `mission_search`. If they give a name or description, search for it. If no mission is provided, search existing missions with `mission_search` to find one that fits the context (source URL, topic, target audience). If a good match exists, use it. If no existing mission fits, delegate to the `create-mission` skill to create one — every import must be linked to a mission.
 
 2. **Identify the offer.** If the mission has a linked offer, fetch it with `offer_search`. The offer contains the commercial positioning, target company size, ICP definition — all critical for scoring.
 
@@ -40,7 +40,7 @@ Before any import, gather commercial context. This directly affects how you esti
    - Company size targeting (if defined in the offer)
    - Any specific keywords, roles, or industries mentioned
 
-If no offer exists yet, proceed with whatever context the user provides. Be explicit about what you know and don't know. But a mission must always exist before the import.
+If no offer exists yet, proceed with whatever context the user provides. Be explicit about what you know and don't know. Suggest the `create-offer` skill if the user wants richer scoring context. But a mission must always exist before the import.
 
 ---
 
@@ -239,3 +239,9 @@ Make the import experience feel like a slick dashboard, not a CLI dump. Use emoj
 🧠 Patterns: [N] rules saved ([P]⬆ [N]⬇)
 → Next: [one actionable sentence]
 ```
+
+Next step suggestions (pick the most relevant):
+- No offer linked to mission: "Create an offer with the `create-offer` skill to improve scoring"
+- Leads ready: "Start a prospecting session with the `routine-prospection` skill"
+- More sources to import: "Import another source for this mission"
+- Scoring needs tuning: "Run another import to add more lexical patterns"
