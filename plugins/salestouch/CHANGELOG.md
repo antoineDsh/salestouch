@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.3 - 2026-04-10
+
+- Align the `create-offer` reference payload with the snake_case `offer.save` MCP schema so plugin examples match the actual command contract.
+- Expand the LinkedIn scrape import skill with all supported source URL types, clearer examples, and the required date inputs for company page viewers.
+
 ## 0.4.2 - 2026-04-10
 
 - Add a new `onboarding` skill that guides first-time users from company setup to their first sent LinkedIn message.
