@@ -48,7 +48,18 @@ If no offer exists yet, proceed with whatever context the user provides. Be expl
 
 ### Source type
 
-The source type is auto-detected from the URL by the backend — don't pass a `source` parameter when you have a URL. The only cases where you need to set `source` explicitly are account-level flows without a URL (e.g., `linkedin_profile_viewers`, `linkedin_company_page_viewers`).
+The source type is **always auto-detected from the URL** by the backend. Never pass a `source` parameter — just provide the URL.
+
+Supported URL formats and what they import:
+
+| URL pattern | Import type |
+|---|---|
+| `/search/results/people/` | LinkedIn people search |
+| `/posts/` or `/feed/update/` | Post engagers (comments + reactions) |
+| `/groups/<id>/` | Group members |
+| `/me/profile-views/` or `/who-viewed-your-profile/` | Profile viewers |
+| `/company/<slug>/` or `/school/<slug>/` | Company/school page viewers (requires `start_date` and `end_date`) |
+| `/sales/search/` | Sales Navigator search |
 
 ### Estimate import signals
 
@@ -79,21 +90,48 @@ Three optional scores (0–100) help the scoring engine weight this import relat
 
 Call `scrape_run` with:
 
-- `url` — The LinkedIn URL to scrape (source type is auto-detected)
-- `source` — Only for account-level flows without URL (profile viewers, company page viewers)
+- `url` — The LinkedIn URL to scrape (source type is auto-detected from the URL)
 - `mission_id` — Required. Always resolve or create the mission in Phase 1.
 - `fit_source`, `signal_source`, `import_activity_score` — Only the ones you can estimate
 - `limit` — If the user wants to cap the number of leads (default: let the backend decide)
+- `start_date`, `end_date` — Required only for company/school page viewers (ISO date strings, e.g. `"2026-04-01"`)
 
-Example for a LinkedIn post engagers import:
+Examples:
 
 ```
+# Post engagers
 scrape_run({
   url: "https://www.linkedin.com/posts/someone_topic-activity-123456",
   mission_id: "mis_abc123",
   fit_source: 55,
   signal_source: 65,
   import_activity_score: 80
+})
+
+# Group members
+scrape_run({
+  url: "https://www.linkedin.com/groups/56766/",
+  mission_id: "mis_abc123",
+  fit_source: 30,
+  signal_source: 40,
+  limit: 100
+})
+
+# Profile viewers
+scrape_run({
+  url: "https://www.linkedin.com/me/profile-views/",
+  mission_id: "mis_abc123",
+  signal_source: 75,
+  import_activity_score: 85
+})
+
+# Company page viewers
+scrape_run({
+  url: "https://www.linkedin.com/company/salestouchapp/",
+  mission_id: "mis_abc123",
+  start_date: "2026-04-01",
+  end_date: "2026-04-10",
+  signal_source: 70
 })
 ```
 
