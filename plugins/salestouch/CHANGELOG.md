@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0 - 2026-04-10
+
+- Add the new LinkedIn scrape import skill with clearer source inference from supported Sales Navigator and LinkedIn URLs.
+- Ship a full prospecting routine skill that runs lead selection, enrichment, draft review, and send flows from SalesTouch MCP.
+- Make draft workflows lead-centric so save, send, and cancel actions resolve the active draft from the lead instead of exposing internal draft ids.
+- Expose active lead drafts in `lead.search` context responses to support review and follow-up sessions directly from Claude.
+
 ## 0.3.0 - 2026-04-10
 
 - Ship the new lead scoring model with import provenance, lexical fit, completeness, activity, company size targeting, and optional deep scoring support.
