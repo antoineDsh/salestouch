@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.1 - 2026-04-10
+
+- Add a `create-offer` skill that researches company context and builds exhaustive `offer.save` payloads.
+- Add a `create-mission` skill with reproducible mission briefs organized around description, job to be done, instructions, and sources.
+- Expose clearer mission MCP aliases and route existing prospecting skills toward the new mission and offer creation flows.
+
 ## 0.4.0 - 2026-04-10
 
 - Add the new LinkedIn scrape import skill with clearer source inference from supported Sales Navigator and LinkedIn URLs.
