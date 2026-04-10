@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.2 - 2026-04-10
+
+- Add a new `onboarding` skill that guides first-time users from company setup to their first sent LinkedIn message.
+- Refresh the `routine-prospection` skill around a tighter one-lead-at-a-time cadence with clearer session progress and milestone messaging.
+- Simplify the gamification guide so onboarding and daily prospecting share a more focused achievement and combo system.
+
 ## 0.4.1 - 2026-04-10
 
 - Add a `create-offer` skill that researches company context and builds exhaustive `offer.save` payloads.
