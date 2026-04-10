@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://www.salestouch.io"><img src="https://img.shields.io/badge/website-salestouch.io-blue?style=flat-square" alt="Website" /></a>
-  <img src="https://img.shields.io/badge/version-0.2.0-green?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/version-0.3.0-green?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/platform-Claude_Desktop_|_Claude_Code-purple?style=flat-square" alt="Platform" />
   <img src="https://img.shields.io/badge/protocol-MCP-orange?style=flat-square" alt="MCP" />
 </p>
@@ -76,7 +76,7 @@ Find prospects by role, industry, company size, and location. Enrich profiles wi
 
 ### Smart lead scoring
 
-Not all leads are created equal. SalesTouch scores and ranks your prospects based on fit and engagement signals. Train the scoring model with natural language feedback — it learns what *your* ideal customer looks like.
+Not all leads are created equal. SalesTouch scores and ranks your prospects with import-aware scoring, offer-specific lexical rules, company size targeting, and recent activity signals.
 
 ```
 > Show me my top 10 leads this week
@@ -232,7 +232,7 @@ Here's what's under the hood:
 | **Imports** | 10 | LinkedIn search, Sales Nav, post engagers, groups, profile & page viewers |
 | **Missions** | 4 | Create structured prospecting workflows with goals and tracking |
 | **Offers** | 4 | Create and manage your sales offers |
-| **Scoring** | 2 | View scoring profile, train it with natural language feedback |
+| **Scoring** | 2 | Save import lexical reviews and use offer-aware lead scoring automatically |
 | **Context** | 1 | Deep prospect intel: conversation history, relation, outreach timeline |
 
 > **Pro tip:** run `/salestouch:linkedin-message-writer` for a guided LinkedIn message drafting experience.

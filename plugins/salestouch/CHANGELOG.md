@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0 - 2026-04-10
+
+- Ship the new lead scoring model with import provenance, lexical fit, completeness, activity, company size targeting, and optional deep scoring support.
+- Add offer-specific lexical review flows so imports can return headline samples and save new weighted expressions through `scrape.review.save`.
+- Expose import scoring inputs plus lead deep score and offer company size settings across the published MCP command surface.
+- Retire the legacy public scoring command in favor of the import-driven review workflow and the unified scoring engine.
+
 ## 0.2.0 - 2026-04-10
 
 - Consolidate the Claude-facing MCP surface around compound lead, scrape, LinkedIn, mission, and offer tools so common workflows require fewer calls.

@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://www.salestouch.io"><img src="https://img.shields.io/badge/website-salestouch.io-blue?style=flat-square" alt="Website" /></a>
-  <img src="https://img.shields.io/badge/version-0.2.0-green?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/version-0.3.0-green?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/platform-Claude_Desktop_|_Claude_Code-purple?style=flat-square" alt="Platform" />
   <img src="https://img.shields.io/badge/protocol-MCP-orange?style=flat-square" alt="MCP" />
 </p>
@@ -40,7 +40,7 @@ SalesTouch handles the research, enrichment, scoring, and message drafting. **Yo
 | | Capability | Description |
 |---|---|---|
 | **Search** | Lead search & enrichment | Find prospects by role, industry, company size, location. Enrich with LinkedIn data. |
-| **Score** | Smart lead scoring | Prioritize leads with AI scoring. Train it with natural language feedback. |
+| **Score** | Smart lead scoring | Prioritize leads with import-aware scoring, offer-specific lexical rules, and company size targeting. |
 | **Draft** | LinkedIn message drafting | 3 personalized message variants per prospect. Not generic. Not spammy. |
 | **Import** | LinkedIn & Sales Nav imports | Pull leads from searches, post engagers, groups, profile viewers. |
 | **Act** | LinkedIn actions | Send messages, connection requests, post, comment, react — all from Claude. |
