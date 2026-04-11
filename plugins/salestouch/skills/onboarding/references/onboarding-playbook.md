@@ -14,23 +14,21 @@ Use when introducing SalesTouch:
 
 | Step | WHY block | Transition out |
 |------|-----------|----------------|
-| 🎁 Offer | Every message will pull from this — your positioning, your proof, your edge. | "Now let's point it at the right people →" |
-| 🎯 Mission | Who are you going after, and how? Locks in your audience and playbook. | "Quick check — is your LinkedIn wired in?" |
-| 🔗 LinkedIn | Messages go through your real LinkedIn — your face, your profile, 100% authentic. | "Now let's fill that pipeline →" |
-| 📥 Import | Someone who liked a post about your topic = warm lead. | "Time for the real thing →" |
+| 🎁 Offer | Every message will pull from this — your positioning, your proof, your edge. | "Let's check your LinkedIn is wired in →" |
+| 🔗 LinkedIn | Messages go through your real LinkedIn — your face, your profile, 100% authentic. | "Now the big one — your first mission →" |
+| 🎯 Mission | Who, how, and where — your strategy, your source, your first leads, all at once. | "Time for the real thing →" |
 | 💬 Routine | Best lead → enriched profile → 3 tailored messages → you pick → send. | (completion screen) |
 
 ## Achievements (escalating energy)
 
-Each step's energy builds toward the climax at Step 5:
+Each step's energy builds toward the climax at Step 4:
 
 | Step | Achievement | Energy |
 |------|-------------|--------|
 | 1 | 🏆 Offer armed! Every future message just got sharper. | Calm confidence |
-| 2 | 🏆 Mission deployed! You've got a target. | Building |
-| 3 | 🏆 [name] is live! Connection confirmed. | Quick win |
-| 4 | 🏆 [N] leads loaded! Your pipeline is live. 🔥 | Heat rising |
-| 5 | 🏆🏆🏆 FIRST MESSAGE SENT! You're in the game. 🎉 | Peak |
+| 2 | 🏆 [name] is live! Connection confirmed. | Quick win |
+| 3 | 🏆 Mission deployed with [N] leads! Your pipeline is live. 🔥 | Heat rising |
+| 4 | 🏆🏆🏆 FIRST MESSAGE SENT! You're in the game. 🎉 | Peak |
 
 ## Progress — Power Bar
 
@@ -38,17 +36,16 @@ After each step, show a growing ⚡ line listing what's now active:
 
 ```
 Step 1: ⚡ Offer loaded
-Step 2: ⚡ Offer loaded · Mission locked
-Step 3: ⚡ Offer loaded · Mission locked · LinkedIn live
-Step 4: ⚡ Offer loaded · Mission locked · LinkedIn live · [N] leads scored
-Step 5: ⚡ Offer loaded · Mission locked · LinkedIn live · [N] leads scored · First message out
+Step 2: ⚡ Offer loaded · LinkedIn live
+Step 3: ⚡ Offer loaded · LinkedIn live · Mission locked · [N] leads scored
+Step 4: ⚡ Offer loaded · LinkedIn live · Mission locked · [N] leads scored · First message out
 ```
 
 The bar grows — the user feels their setup accumulating power.
 
 ## Feed Coaching
 
-When helping pick a LinkedIn post for engager import:
+When the `create-mission` skill browses the feed during Step 3, this coaching applies:
 
 **Good posts**: Industry takes, "how I did X", competitor launches, pain-point discussions, event recaps, hiring signals.
 
@@ -64,8 +61,8 @@ Always "no big deal" tone:
 
 - Website unreachable → "We'll build the offer from what you tell me."
 - No LinkedIn → "Quick detour — connect it in settings, tell me when done."
-- Feed empty → "Paste a LinkedIn post URL directly."
-- 0 leads imported → "Let's try another post — more recent ones work better."
+- Mission/import fails → "Let's try again — what audience do you want to target?"
+- 0 leads imported → Handled by create-mission skill, will suggest another source.
 - Send fails → "Saved as draft. Setup is complete either way! 🎉"
 
 ## The 20-Minute Pitch (completion)

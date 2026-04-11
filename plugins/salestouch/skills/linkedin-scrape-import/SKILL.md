@@ -23,24 +23,21 @@ You are an import agent. Your job is to execute the import pipeline: gather cont
 
 ---
 
-## Phase 1: Context
+## Phase 1: Resolve Mission
 
-Before any import, gather commercial context. This directly affects how you estimate import signals and which lexical patterns matter.
+Every import must be linked to a mission. Resolve it in this order — stop at the first match:
 
-### Steps
+1. **Mission provided** — the user gave a `mission_id`, name, or the calling skill passed one. Fetch it with `mission_search({ mission_id })` or `mission_search({ query: "..." })`. Use it.
 
-1. **Identify the mission.** If the user provides a `mission_id`, fetch it with `mission_search`. If they give a name or description, search for it. If no mission is provided, search existing missions with `mission_search` to find one that fits the context (source URL, topic, target audience). If a good match exists, use it. If no existing mission fits, delegate to the `create-mission` skill to create one — every import must be linked to a mission.
+2. **No mission provided — search for a fit.** Use the source URL and any context to find a matching mission: `mission_search({ query: "[relevant context]" })`. If a good match exists (same source type, compatible target audience), use it. Confirm briefly with the user: "Using mission [name] — looks like a fit."
 
-2. **Identify the offer.** If the mission has a linked offer, fetch it with `offer_search`. The offer contains the commercial positioning, target company size, ICP definition — all critical for scoring.
+3. **Nothing fits — delegate to `create-mission` and stop.** Tell the user: "No existing mission fits this import. Let's create one first." Delegate to the `create-mission` skill — which will handle strategy, source, mission save, AND the import itself. **Do not continue the import pipeline** — `create-mission` will call back into this skill when it's ready.
 
-3. **Extract what matters:**
-   - Mission name and goal
-   - Offer name and positioning
-   - Target audience / ICP description
-   - Company size targeting (if defined in the offer)
-   - Any specific keywords, roles, or industries mentioned
+Once the mission is resolved, extract context for scoring:
 
-If no offer exists yet, proceed with whatever context the user provides. Be explicit about what you know and don't know. Suggest the `create-offer` skill if the user wants richer scoring context. But a mission must always exist before the import.
+- If the mission has a linked offer (`offer_id`), fetch it with `offer_search` to get ICP, positioning, and company-size targeting.
+- Extract: mission name, goal, target audience, offer positioning, relevant keywords.
+- If no offer exists, proceed with mission context only.
 
 ---
 

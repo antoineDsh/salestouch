@@ -1,18 +1,27 @@
 ---
 name: onboarding
 description: |
-  Guide a first-time SalesTouch user from zero to sending their first LinkedIn message. Walks through offer creation, mission setup, LinkedIn account check, lead import from post engagers, and first prospecting routine — delegating each step to the dedicated skill.
+  Guide a first-time SalesTouch user from zero to sending their first LinkedIn message. Walks through offer creation, LinkedIn account check, mission setup (including strategy, source, and first import), and first prospecting routine — delegating each step to the dedicated skill.
 
   USE WHEN: The user says "onboarding", "get started", "first time", "first session", "je viens de m'inscrire", "how do I start", "setup SalesTouch", "guide me", "walk me through", "c'est mon premier jour", "c'est ma première session", "je débute", "new to SalesTouch", "set everything up", "start from zero", "première fois", "let's start", or any phrase suggesting they are a new user who hasn't yet sent a message.
 ---
 
 # SalesTouch Onboarding
 
-From zero to first message in 5 steps. This skill is the conductor — it delegates each step to a dedicated skill and never calls `offer_save`, `mission_save`, or `scrape_run` directly.
+From zero to first message in 4 steps. This skill is the conductor — it delegates each step to a dedicated skill and never calls `offer_save`, `mission_save`, `scrape_run`, or `lead_draft_send` directly.
 
 ## Language Rule
 
 Skill body in English. All user-facing output adapts to the user's language, auto-detected from their first message. Never mix languages.
+
+## Interaction Principle
+
+**Always ask, never assume.** The onboarding is a guided conversation, not an automated pipeline. At every step:
+
+- Explain what's about to happen and why.
+- Ask for confirmation before moving to the next step.
+- Between steps, ask: "Ready for the next step?" or "Want to adjust anything before we move on?"
+- Never silently skip steps or auto-proceed. Even in resume mode, confirm with the user.
 
 ## Tone & UX
 
@@ -23,16 +32,16 @@ Guide like a friend who's done this 100 times. Warm, confident, zero jargon.
 **Progress = power bar.** After each step, show what's now active:
 
 ```
-⚡ Offer loaded · Mission locked · LinkedIn live · 14 leads scored
+⚡ Offer loaded · LinkedIn live · Mission locked · 14 leads scored
 ```
 
-The bar grows with each step — the user feels their setup getting more powerful. At Step 5 it's the full stack.
+The bar grows with each step — the user feels their setup getting more powerful. At Step 4 it's the full stack.
 
 **Celebrate with escalation.** Energy rises through the journey:
 
-- Steps 1-3: one-line `🏆 [achievement]`
-- Step 4: add 🔥
-- Step 5: triple `🏆🏆🏆` + 🎉
+- Steps 1-2: one-line `🏆 [achievement]`
+- Step 3: add 🔥
+- Step 4: triple `🏆🏆🏆` + 🎉
 
 **Educate in one breath.** Before each step, one sentence explaining WHY — max 2 lines. The user learns by doing, not reading.
 
@@ -51,9 +60,9 @@ Keep it short. Warm. One screen.
 20 personalized LinkedIn messages. 20 minutes. Every day.
 That's SalesTouch — your prospecting copilot.
 
-5 quick steps and you're live:
+4 quick steps and you're live:
 
-🎁 Offer → 🎯 Mission → 🔗 LinkedIn → 📥 Leads → 💬 Send
+🎁 Offer → 🔗 LinkedIn → 🎯 Mission → 💬 Send
 
 Tell me about your company and I'll handle the rest:
 ```
@@ -64,12 +73,12 @@ Ask only:
 - What you sell (one sentence)
 - Website URL (optional)
 
-Conversational, not a form. Move to Step 1 as soon as you have enough context.
+Conversational, not a form. When you have enough context, summarize what you understood and ask: "Does this sound right? Ready to create your offer?"
 
 ### Step 1: Create Offer
 
 ```
-🎁 Step 1/5 — Your offer
+🎁 Step 1/4 — Your offer
 
 Every message SalesTouch writes will pull from this —
 your positioning, your proof points, your edge.
@@ -84,47 +93,27 @@ When done:
 ⚡ Offer loaded
 ```
 
-"Now let's point it at the right people →"
+"Ready to check your LinkedIn connection?"
 
-### Step 2: Create Mission
-
-```
-🎯 Step 2/5 — Your mission
-
-Who are you going after, and how? A mission locks in
-your audience, your rules, your playbook.
-```
-
-**Delegate to `create-mission`** with the offer from Step 1.
-
-When done:
+### Step 2: LinkedIn Check
 
 ```
-🏆 Mission deployed! You've got a target.
-⚡ Offer loaded · Mission locked
-```
-
-"Quick check — is your LinkedIn wired in?"
-
-### Step 3: Check LinkedIn
-
-```
-🔗 Step 3/5 — LinkedIn check
+🔗 Step 2/4 — LinkedIn check
 
 Messages go through your real LinkedIn — your face,
 your profile, 100% authentic. Checking connection...
 ```
 
-**Call `linkedin_accounts({})` directly.** Only direct tool call — lightweight check.
+**Call `linkedin_accounts({})` directly.** Only direct tool call in the onboarding.
 
 Connected:
 
 ```
 🏆 [account name] is live! Connection confirmed.
-⚡ Offer loaded · Mission locked · LinkedIn live
+⚡ Offer loaded · LinkedIn live
 ```
 
-"Now let's fill that pipeline →"
+"Now the big one — your first mission. This is where we decide your strategy, find your source, and import your first leads. Ready?"
 
 Not connected:
 
@@ -134,57 +123,46 @@ Not connected:
 Connect it in SalesTouch settings, then tell me — I'll re-check!
 ```
 
-Wait and re-check. Hard blocker — cannot proceed without it.
+Wait and re-check. Hard blocker — cannot proceed without it. LinkedIn must be connected before Step 3 because the mission creation flow may need to browse the feed to find source posts.
 
-### Step 4: Import Leads
-
-```
-📥 Step 4/5 — Your first leads
-
-Someone who liked a post about your topic = warm lead.
-Let's find a post and import its engagers.
-```
-
-**Sub-step 4a: Find a post.** Call `linkedin_feed({ account_id })`. Display posts compactly:
+### Step 3: Create Mission
 
 ```
-Your recent feed:
+🎯 Step 3/4 — Your mission
 
-1. [Author] — "[truncated text ~80 chars]..."
-2. [Author] — "[truncated text ~80 chars]..."
-3. [Author] — "[truncated text ~80 chars]..."
-
-Pick a number, "more" for next page, or paste a post URL.
-
-💡 Tip: look for posts about topics your clients care about.
+This is the big one. We'll decide WHO you're targeting,
+HOW you'll find them, and import your first leads — all at once.
 ```
 
-Coach inline: "This one about [topic] looks great for your audience" or "I'd skip this one — too personal."
+**Delegate to `create-mission`** with the offer from Step 1.
 
-If feed is empty or nothing fits after 2 pages: "Got a LinkedIn post URL? Paste it and we'll import the engagers."
-
-**Sub-step 4b: Import.** Confirm briefly, then delegate to `linkedin-scrape-import` with the post URL and mission_id.
+The `create-mission` skill handles the full pipeline:
+1. Choose source type (post engagers, search, group, etc.)
+2. Identify concrete source URL (may browse feed using the LinkedIn account from Step 2)
+3. Save the mission with coherent strategy and instruction
+4. Run the first import with lexical scoring
 
 When done:
 
 ```
-🏆 [N] leads loaded and scored! Pipeline is live. 🔥
-⚡ Offer loaded · Mission locked · LinkedIn live · [N] leads scored
+🏆 Mission deployed with [N] leads! Your pipeline is live. 🔥
+⚡ Offer loaded · LinkedIn live · Mission locked · [N] leads scored
 ```
 
-"Time for the real thing →"
+"Your pipeline is ready. Want to send your very first message right now?"
 
-### Step 5: First Message
+### Step 4: First Message
+
+Only proceed if the user confirms.
 
 ```
-💬 Step 5/5 — The moment of truth
+💬 Step 4/4 — The moment of truth
 
-This is what it's all about: the Prospecting Routine.
 Best lead → enriched profile → 3 tailored messages → you pick → send.
 One lead today. 20 tomorrow. Every day after that.
 ```
 
-**Delegate to `routine-prospection`** with mission from Step 2, target = 1 lead.
+**Delegate to `routine-prospection`** with mission from Step 3, target = 1 lead.
 
 "Just one to get the feel — tomorrow you'll blitz through 20."
 
@@ -192,7 +170,7 @@ When first message is sent (or draft saved):
 
 ```
 🏆🏆🏆 FIRST MESSAGE SENT! You're in the game. 🎉
-⚡ Offer loaded · Mission locked · LinkedIn live · [N] leads scored · First message out
+⚡ Offer loaded · LinkedIn live · Mission locked · [N] leads scored · First message out
 ```
 
 ### Completion
@@ -200,7 +178,7 @@ When first message is sent (or draft saved):
 ```
 🎊 You're live.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-⚡ Offer · Mission · LinkedIn · Leads · First message
+⚡ Offer · LinkedIn · Mission · Leads · First message
 
 From now on, just say:
 
@@ -215,17 +193,17 @@ From now on, just say:
 If the user returns mid-onboarding, check state silently:
 
 1. `offer_search({})` → any offers?
-2. `mission_search({ status: "running" })` → running missions?
-3. `linkedin_accounts({})` → connected?
+2. `linkedin_accounts({})` → connected?
+3. `mission_search({ status: "running" })` → running missions with sources?
 4. `lead_search({ mission_id, limit: 1 })` → leads exist?
 
-Skip completed steps, show what was detected:
+Show what was detected and **ask before skipping**:
 
 ```
-🔍 Picking up where you left off...
-⚡ Offer loaded · Mission locked · LinkedIn live
+🔍 I found some existing setup:
+⚡ Offer loaded · LinkedIn live
 
-→ Let's import your first leads!
+→ Want to jump straight to mission creation, or review what's already set up first?
 ```
 
 ## Error Handling
@@ -233,23 +211,23 @@ Skip completed steps, show what was detected:
 Every error is "no big deal":
 
 - **Offer fails**: "Want to try again or skip for now? Messages work without an offer — they're just sharper with one."
-- **Mission fails**: Same. Offer-less mission is fine.
 - **No LinkedIn**: Hard blocker. Clear instructions, wait, re-check.
-- **Feed empty**: "Paste a LinkedIn post URL directly."
-- **Import returns 0**: "Let's try another post — more recent ones work better."
-- **Send fails**: "Saved as draft. You can send it in your next routine session. Setup is complete either way! 🎉"
+- **Mission creation fails**: "Let's try again — what audience do you want to target?"
+- **Import returns 0 leads**: Handled inside `create-mission` — it will suggest trying a different source.
+- **Send fails**: "Saved as draft. Setup is complete either way! 🎉"
 
 ## Behavioral Rules
 
-- **Execute, don't plan.** Delegate immediately, never narrate intentions.
-- **Delegation-first.** Never call `offer_save`, `mission_save`, `scrape_run`, `lead_enrich`, `lead_draft_save`, `lead_draft_send`. Only direct calls: `linkedin_accounts` (Step 3), `linkedin_feed` (Step 4a).
+- **Ask, then delegate.** Always confirm before moving to the next step or delegating to a skill. Never auto-proceed.
+- **Delegation-first.** Never call `offer_save`, `mission_save`, `scrape_run`, `lead_enrich`, `lead_draft_save`, `lead_draft_send`. Only direct call: `linkedin_accounts` (Step 2).
 - **One step at a time.** Show current step only.
 - **Max 2 lines of education** before each step. Learn by doing.
 - **Skip optional fields.** Guide user to defaults when they don't know.
 - **Celebrate inline.** One line per achievement. No heavy blocks.
-- **Protect the flow.** After a delegated skill completes, reclaim control immediately. Replace its `→ Next:` with your transition.
+- **Protect the flow.** After a delegated skill completes, reclaim control immediately. Replace its `→ Next:` with your transition question.
 - **First message is the goal.** Gently redirect if user drifts: "Let's send that first message, then we'll explore."
-- **Resume smartly.** Detect existing state, skip done steps, confirm with user.
+- **Resume smartly.** Detect existing state, show what was found, ask before skipping steps.
+- **LinkedIn before mission.** Step 2 must come before Step 3 because mission creation may need to browse the LinkedIn feed.
 
 ## Bundled Reference
 
