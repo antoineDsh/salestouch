@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.4 - 2026-04-11
+
+- Expand the `create-mission` skill into a full guided flow that picks one source strategy, validates the source, saves the mission, and launches the first import.
+- Tighten the LinkedIn scrape import skill so every import resolves an existing mission first and delegates back to mission creation when no good fit exists.
+- Refresh onboarding around explicit user confirmations, a LinkedIn connection check before mission setup, and a mission step that includes the first lead import.
+
 ## 0.4.3 - 2026-04-10
 
 - Align the `create-offer` reference payload with the snake_case `offer.save` MCP schema so plugin examples match the actual command contract.
