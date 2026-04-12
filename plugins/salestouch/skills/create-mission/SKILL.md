@@ -167,7 +167,12 @@ If a field fails validation, propose an improved version using offer context and
 - **Profile viewers**: "Acknowledge the profile visit. Direct, curious tone. CTA: ask what caught their attention."
 - **Company page**: "Reference their connection to [company]. Contextual. CTA: relevant to the company context."
 
-**Before saving, show the full brief and ask for confirmation:**
+**Before saving, show the full brief and ask two questions:**
+
+1. Confirmation of the brief
+2. When to start the mission
+
+First, check if other missions are currently running via `mission_search({ status: "running" })`.
 
 ```
 🧠 Here's the mission I'm about to create:
@@ -181,8 +186,26 @@ If a field fails validation, propose an improved version using offer context and
 📦 Offer: [offer name or "none"]
 🗣️ Language: [language]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Want me to save this, or would you like to change something?
 ```
+
+If other missions are running:
+```
+📋 You have [N] mission(s) currently running: [mission names].
+
+Do you want to:
+1. 🚀 Start this mission now — it will run alongside your other missions
+2. 📋 Save it for later — create it as "new" and start it when you're ready
+
+💡 Running multiple missions at once means leads from all of them show up in your routine.
+```
+
+If no other missions are running:
+```
+Want me to save and start this mission now?
+```
+
+- User picks "start now" → `status: "running"`
+- User picks "save for later" → `status: "new"`
 
 Only call `mission_save` after the user confirms. For update, include `mission_id`.
 
@@ -202,6 +225,10 @@ This step is not optional. A mission without its first import is incomplete — 
 
 ### 7. Report Result
 
+Adapt the report based on the chosen status:
+
+**If `running`:**
+
 ```
 ✅ Mission live!
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -212,15 +239,33 @@ This step is not optional. A mission without its first import is incomplete — 
 🔗 Source: [url]
 📦 Offer: [offer name or "none"]
 👥 Leads: [N] imported
-🗣️ Language: [language]
+🚦 Status: running
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 → Next: [one actionable sentence]
+```
+
+**If `new`:**
+
+```
+✅ Mission saved!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 Mission: [name]
+🧭 Job: [job_to_be_done]
+👥 Target: [target_audience]
+📌 Strategy: [source type]
+🔗 Source: [url]
+📦 Offer: [offer name or "none"]
+👥 Leads: [N] imported
+🚦 Status: new — not yet active
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+→ When you're ready, say "start mission [name]" to activate it.
 ```
 
 **Next step suggestions** (pick the most relevant):
 
 - No offer linked: "Create an offer with `create-offer` to sharpen scoring and messages"
-- Leads imported, ready to go: "Start prospecting with `routine-prospection`"
+- Running + leads: "Start prospecting with `routine-prospection`"
+- New (saved for later): "When you're ready, say 'start mission [name]' to activate it"
 - Want more leads: "Import another source of the same type into this mission"
 - Want a different approach: "Create another mission with a different source type"
 

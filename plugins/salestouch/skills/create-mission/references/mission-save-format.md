@@ -46,7 +46,7 @@ In practice, populate all of these whenever possible:
 
 ### Execution Metadata
 
-- `status` — enum: `new`, `running`, `done`, `archived`
+- `status` — enum: `new`, `running`, `done`, `archived`. Use `new` when the user wants to prepare the mission but start it later (leads won't appear in routine). Use `running` when the user wants to start immediately (leads appear in routine right away).
 - `language` — defaults to `fr` if omitted in creation
 - `agent_id` — optional, backend picks the first agent if omitted
 - `offer_id` — optional but strongly recommended when tied to an offer
