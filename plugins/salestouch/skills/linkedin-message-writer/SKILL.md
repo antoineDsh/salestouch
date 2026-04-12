@@ -163,7 +163,7 @@ Formatting rules:
 lead_draft_send({
   lead_id: "[lead_id]",
   selected_variation_index: [1|2|3],
-  send_now: true
+  dispatch_mode: "immediate"
 })
 ```
 
