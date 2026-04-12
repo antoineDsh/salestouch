@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.5 - 2026-04-12
+
+- Add mission start timing to the `create-mission` skill: check running missions and let the user choose between starting now or saving for later.
+- Fix mission-save reference payload format and linkedin-message-writer skill metadata alignment.
+
 ## 0.4.4 - 2026-04-11
 
 - Expand the `create-mission` skill into a full guided flow that picks one source strategy, validates the source, saves the mission, and launches the first import.
