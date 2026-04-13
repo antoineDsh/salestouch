@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.6 - 2026-04-13
+
+- Tighten published MCP OAuth metadata around the actual SalesTouch permission scopes and clarify the consent labels for SalesTouch, messaging, and LinkedIn access.
+- Fix public API thread resource permissions so draft thread access maps to the right published capability.
+- Add editable ideal and acceptable company-size targeting fields to offer positioning so offer scoring settings can be updated directly in the app.
+
 ## 0.4.5 - 2026-04-12
 
 - Add mission start timing to the `create-mission` skill: check running missions and let the user choose between starting now or saving for later.

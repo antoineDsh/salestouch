@@ -1,6 +1,6 @@
 {
   "name": "salestouch",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "Claude plugin for SalesTouch prospecting tools, skills, and MCP workflows.",
   "author": {
     "name": "SalesTouch",
