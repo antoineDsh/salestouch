@@ -120,12 +120,19 @@ Show the lead card + all 3 variants in a single block. Adapt labels to user's la
 
 ```
 🎯 LEAD [n]/[total]: [Name]
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 🏢 [Company] | 🎯 Score: [score]
+
 🔗 [linkedin_url]
+
 💡 Hooks:
+
   • [hook 1]
+
   • [hook 2]
+
   • [hook 3]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -180,8 +187,11 @@ Show confirmation:
 
 ```
 ✅ SENT - [Name]
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 📝 [selected message text]
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
@@ -220,9 +230,13 @@ Show confirmation:
 
 ```
 🚫 DO NOT CONTACT - [Name]
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 Lead marked as do_not_contact.
+
 This lead won't appear in future sessions.
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 

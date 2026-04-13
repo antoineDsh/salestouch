@@ -50,9 +50,13 @@ Welcome screen — light, warm:
 
 ```
 🚀 Session started
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 ⏰ [timestamp]
+
 🎯 [n] leads · 🔗 [account name]
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
@@ -169,12 +173,17 @@ TZ='Europe/Paris' date '+%H:%M:%S'
 
 ```
 🏆 [duration] min · [sent] sent · [skipped] skipped
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 📊 Avg score: [score] · Best: [name] ([score])
+
 🏅 [Best achievement earned]
 
 [Session-end message] 🔥
+
 → [Next step]
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 

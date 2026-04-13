@@ -150,15 +150,25 @@ Show a short result block in the user's language:
 
 ```
 ✅ Offer saved!
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 🏢 Company: [company]
+
 🎁 Offer: [offer name]
+
 🧭 Positioning: [one-liner]
+
 🧩 Differentiators: [count]
+
 🧪 Problem / solution pairs: [count]
+
 🏆 References: [count]
+
 📚 Resources: [count]
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 → Next: [one actionable sentence]
 ```
 

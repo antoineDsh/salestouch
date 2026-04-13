@@ -62,11 +62,36 @@ NEVER compress text onto single lines. All output must be properly formatted wit
 Messages: Each paragraph separated by blank line
 Sections: Blank lines between headers and content
 Lists: Proper bullet formatting with line breaks
-Display boxes: Clear separation with blank lines before/after content
+Display boxes: **Every line must be separated by a blank line** — including emoji-prefixed lines in info blocks. Without blank lines between them, markdown renderers collapse consecutive lines into a single paragraph.
 Em-dash prohibition: NEVER use em-dash "—" in messages (use "-" or avoid)
 
-Example of CORRECT formatting:
+Example of CORRECT display block formatting:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 Name: [name]
+
+🧭 Job: [job description]
+
+👥 Target: [target audience]
+
+📌 Strategy: [strategy]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Example of INCORRECT display block (NEVER do this — renders as one line):
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 Name: [name]
+🧭 Job: [job description]
+👥 Target: [target audience]
+📌 Strategy: [strategy]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Example of CORRECT message formatting:
+
 📝 MESSAGE VARIANT 1:
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Salut Marie,
@@ -80,5 +105,6 @@ J'aimerais échanger avec toi sur [topic].
 Antoine
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 Example of INCORRECT formatting (NEVER do this):
 📝 MESSAGE: Salut Marie, Je suis tombé sur ton profil et j'ai vu que tu travailles sur l'automatisation chez TechCorp. J'aimerais échanger avec toi sur [topic]. À bientôt, Antoine

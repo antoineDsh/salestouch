@@ -176,15 +176,25 @@ First, check if other missions are currently running via `mission_search({ statu
 
 ```
 🧠 Here's the mission I'm about to create:
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 🎯 Name: [name]
+
 🧭 Job: [job_to_be_done]
+
 👥 Target: [target_audience]
+
 📌 Strategy: [source type]
+
 🔗 Source: [url]
+
 📝 Instruction: [instruction summary]
+
 📦 Offer: [offer name or "none"]
+
 🗣️ Language: [language]
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
@@ -231,16 +241,27 @@ Adapt the report based on the chosen status:
 
 ```
 ✅ Mission live!
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 🎯 Mission: [name]
+
 🧭 Job: [job_to_be_done]
+
 👥 Target: [target_audience]
+
 📌 Strategy: [source type]
+
 🔗 Source: [url]
+
 📦 Offer: [offer name or "none"]
+
 👥 Leads: [N] imported
+
 🚦 Status: running
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 → Next: [one actionable sentence]
 ```
 
@@ -248,16 +269,27 @@ Adapt the report based on the chosen status:
 
 ```
 ✅ Mission saved!
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 🎯 Mission: [name]
+
 🧭 Job: [job_to_be_done]
+
 👥 Target: [target_audience]
+
 📌 Strategy: [source type]
+
 🔗 Source: [url]
+
 📦 Offer: [offer name or "none"]
+
 👥 Leads: [N] imported
+
 🚦 Status: new — not yet active
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 → When you're ready, say "start mission [name]" to activate it.
 ```
 

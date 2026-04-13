@@ -55,9 +55,11 @@ Keep it short. Warm. One screen.
 
 ```
 🚀 Welcome to SalesTouch!
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 20 personalized LinkedIn messages. 20 minutes. Every day.
+
 That's SalesTouch — your prospecting copilot.
 
 4 quick steps and you're live:
@@ -177,7 +179,9 @@ When first message is sent (or draft saved):
 
 ```
 🎊 You're live.
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 ⚡ Offer · LinkedIn · Mission · Leads · First message
 
 From now on, just say:
@@ -185,6 +189,7 @@ From now on, just say:
   "lance ma routine de prospection"
 
 20 leads · 20 messages · 20 minutes · every day. 🚀
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
