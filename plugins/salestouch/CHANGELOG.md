@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.7 - 2026-04-13
+
+- Add the `lead.lexical.extract` MCP tool and the new `rebuild-global-lexical-scoring` skill so Claude can rebuild lexical scoring from the existing lead base in one pass.
+- Add the `lead.rescore` MCP tool to preview or trigger organization-wide and targeted lead rescoring from the published runtime surface.
+- Allow global lexical review saves with `apply_globally=true` so reviewed headline patterns can be stored without binding them to a specific import or offer.
+- Refresh the published prospecting and scoring docs around the new global scoring rebuild workflow.
+
 ## 0.4.6 - 2026-04-13
 
 - Tighten published MCP OAuth metadata around the actual SalesTouch permission scopes and clarify the consent labels for SalesTouch, messaging, and LinkedIn access.
