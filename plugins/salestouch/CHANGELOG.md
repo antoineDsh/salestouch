@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.8 - 2026-04-15
+
+- Update routine-prospection skill to use default action sort instead of explicit score_order, surfacing leads by next action needed.
+- Document the two lead sort strategies (action vs field) in the salestouch skill reference.
+
 ## 0.4.7 - 2026-04-13
 
 - Add the `lead.lexical.extract` MCP tool and the new `rebuild-global-lexical-scoring` skill so Claude can rebuild lexical scoring from the existing lead base in one pass.
