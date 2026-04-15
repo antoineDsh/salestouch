@@ -13,6 +13,15 @@ Use the SalesTouch hosted MCP server for SalesTouch-native workflows.
 - SalesTouch tool-driven workflows exposed through the hosted MCP server
 - Multi-step prospecting tasks that still map to existing SalesTouch tools
 
+## Lead Search & Sorting
+
+`lead_search` supports two smart sort strategies, chosen automatically:
+
+- **Action sort** (default when no sort params): surfaces leads by next action needed — RESPOND > SEND_DRAFT > FIRST_MESSAGE > INVITE > ENRICH > WAITING > OTHER. Best for prospecting and automation workflows.
+- **Field sort**: activated by passing `sort_by`, `score_order`, or `sort_order`. Sorts by a single field (score, createdAt, etc.). Best for reporting and analysis.
+
+To get action-priority ordering, call `lead_search` without any sort parameters. To override, pass `sort_by` or `score_order` explicitly.
+
 ## Workflow
 
 1. Inspect the available SalesTouch tools relevant to the task.

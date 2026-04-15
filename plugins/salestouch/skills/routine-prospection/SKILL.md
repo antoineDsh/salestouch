@@ -86,39 +86,32 @@ Extract: mission name/goal, offer positioning/ICP/value prop, writing instructio
 
 ### 3. Fetch Leads
 
-Two phases — pending drafts first, then fresh leads:
+Use a single call with no sort parameters — the backend defaults to **action priority** sort, which automatically surfaces leads in the right order:
 
-**Phase A: Pending drafts** — backlog from previous sessions. Skip enrichment/drafting.
-
-```
-lead_search({
-  mission_id: "[id]",
-  lead_status: "new",
-  has_pending_draft: true,
-  score_order: "desc",
-  limit: 100,
-  include_context: true
-})
-```
-
-If found: "📬 [n] drafts ready — let's clear them first!"
-
-**Phase B: Fresh leads** — need enrichment + drafting.
+1. Leads that replied and await your response
+2. Leads with a draft ready to send
+3. Leads enriched + connected, ready for a first message
+4. Leads ready to invite
+5. Leads that need enrichment
+6. Leads waiting (pending invitation, already contacted)
+7. Everything else (paused, DNC, not interested)
 
 ```
 lead_search({
   mission_id: "[id]",
   lead_status: "new",
-  has_pending_draft: false,
-  score_order: "desc",
-  limit: [remaining],
+  limit: [session target],
   include_context: true
 })
 ```
 
 For ALL mode, omit `mission_id`. `include_context: true` brings back enrichment data, import context, and draft variations.
 
-Zero leads in both phases → offer: switch mission, import new leads (via `linkedin-scrape-import`), or end session.
+**Pending drafts** appear naturally at the top (group 2 in action sort). When `include_context: true`, draft variations are returned inline — skip enrichment/drafting for those leads and go straight to display + validation.
+
+If found pending drafts: "📬 [n] drafts ready — let's clear them first!"
+
+Zero leads → offer: switch mission, import new leads (via `linkedin-scrape-import`), or end session.
 
 ### 4. Process Each Lead
 
