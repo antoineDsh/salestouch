@@ -26,6 +26,22 @@
       ],
       "source": "./plugins/salestouch",
       "strict": true
+    },
+    {
+      "name": "salestouch-dev",
+      "version": "0.0.0-dev",
+      "description": "Local dev variant — points at your ngrok/cloudflared tunnel. Install for end-to-end testing of local changes in Claude.",
+      "author": {
+        "name": "SalesTouch"
+      },
+      "homepage": "https://www.salestouch.io",
+      "keywords": [
+        "sales",
+        "dev",
+        "mcp"
+      ],
+      "source": "./plugins/salestouch-dev",
+      "strict": false
     }
   ]
 }

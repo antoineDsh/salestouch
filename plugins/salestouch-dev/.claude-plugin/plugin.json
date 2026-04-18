@@ -1,0 +1,16 @@
+{
+  "name": "salestouch-dev",
+  "version": "0.0.0-dev",
+  "description": "Local dev variant of the SalesTouch plugin. Points at a local tunnel (ngrok/cloudflared) instead of prod. Install alongside `salestouch` to test local changes end-to-end in Claude.",
+  "author": {
+    "name": "SalesTouch"
+  },
+  "homepage": "https://www.salestouch.io/docs",
+  "license": "UNLICENSED",
+  "keywords": ["sales", "dev", "mcp"],
+  "agents": "./agents/",
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json",
+  "outputStyles": "./output-styles/"
+}
