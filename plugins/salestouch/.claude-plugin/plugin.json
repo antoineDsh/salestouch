@@ -11,10 +11,6 @@
   "repository": "https://github.com/antoineDsh/salestouch",
   "license": "UNLICENSED",
   "keywords": ["sales", "linkedin", "crm", "prospecting", "mcp"],
-  "commands": ["./commands/linkedin-message-writer.md"],
-  "agents": "./agents/",
-  "skills": "./skills/",
   "hooks": "./hooks/hooks.json",
-  "mcpServers": "./.mcp.json",
-  "outputStyles": "./output-styles/"
+  "mcpServers": "./.mcp.json"
 }

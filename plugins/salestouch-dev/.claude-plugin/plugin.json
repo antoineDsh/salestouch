@@ -8,9 +8,6 @@
   "homepage": "https://www.salestouch.io/docs",
   "license": "UNLICENSED",
   "keywords": ["sales", "dev", "mcp"],
-  "agents": "./agents/",
-  "skills": "./skills/",
   "hooks": "./hooks/hooks.json",
-  "mcpServers": "./.mcp.json",
-  "outputStyles": "./output-styles/"
+  "mcpServers": "./.mcp.json"
 }
