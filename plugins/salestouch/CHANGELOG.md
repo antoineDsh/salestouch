@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0 - 2026-04-23
+
+- Ship the new lead-centric prospecting workflow with `lead.prospect`, `lead.prospect.review`, `lead.prospect.send`, and `lead.prospect.cancel`, plus direct message send helpers for faster Claude-driven outreach.
+- Add rich MCP Apps review surfaces for lead search and prospect drafts, including CRM-style profile context, conversation timelines, inline/fullscreen layouts, and keyboard-driven review actions inside Claude.
+- Refresh the published MCP docs, prompts, and plugin manifests around the new in-chat review flow and the expanded prospecting tool surface.
+- Streamline the marketplace bundle to match the current published runtime surface and remove the old mirrored skill payloads from the shipped plugin package.
+
 ## 0.4.8 - 2026-04-15
 
 - Update routine-prospection skill to use default action sort instead of explicit score_order, surfacing leads by next action needed.
