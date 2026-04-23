@@ -1,10 +1,10 @@
 # Changelog
 
-## 0.6.0 - 2026-04-23
+## 0.5.1 - 2026-04-23
 
 - Add the `routine_start` / `routine_next` / `routine_complete` MCP tools so Claude can open a daily prospecting routine with a stats dashboard (daily goal, XP, level, streak), iterate leads one at a time through phase 1 (replies awaiting) then phase 2 (prospection, score > 50: send draft → first message → invite → enrich), and wrap up with XP, achievements, and a recap.
-- Persist routine sessions through the new `ProspectRoutineRun` table so a user can resume a day's routine across conversations, with deduplicated lead serving, combo tracking, milestone anti-re-fire, and daily-goal overflow bonuses.
-- Extract the `routine-prospection` gamification playbook into a shared `ROUTINE_PLAYBOOK_PROMPT` so the `prospection_session` MCP prompt and the in-tool "coaching" CTA stay aligned on milestones, combos, and tone.
+- Persist routine sessions through the new `ProspectRoutineRun` table so a user can resume a day's routine across conversations, with deduplicated lead serving, anti-replay guards on progress and completion rewards, combo tracking, and daily-goal overflow bonuses.
+- Extract the `routine-prospection` gamification playbook into a shared `ROUTINE_PLAYBOOK_PROMPT`, and refresh the embedded lead-search / draft-review UIs with locale-aware copy plus smoother partial-tool updates.
 
 ## 0.5.0 - 2026-04-23
 
